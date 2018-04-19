@@ -1,13 +1,23 @@
 'use strict';
 
 module.exports = appInfo => {
-  const config = exports = {};
+  const config = {};
 
-  // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1521016413535_5359';
 
-  // add your config here
   config.middleware = [];
+
+  config.mysql = {
+      clinet: {
+          host: 'localhost',
+          port: '3306',
+          user: 'root',
+          password: 'password',
+          database: ''
+      },
+      app: true,
+      agent: false
+  }
 
   return config;
 };

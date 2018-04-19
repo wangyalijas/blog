@@ -5,6 +5,7 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/', controller.home.index);
-  router.get('/article/:id', controller.article.index);
+
+  // 博客前台系统
+  router.get('/', controller.render.index.home);
 };
